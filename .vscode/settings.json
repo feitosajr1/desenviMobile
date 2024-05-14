@@ -1,0 +1,27 @@
+{
+  // Editor
+  "editor.wordWrap": "on" /*Quebra de linha ao final da tela*/,
+  "editor.lineHeight": 20 /*Espaçamento entre as linhas*/,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true, //Realça a linha entre o inicio e fim de uma tag
+  "editor.minimap.enabled": false /*Desativa o minimapa da lateral*/,
+  "editor.formatOnSave": true /*Formata o texto no momento que é salvo*/,
+  "editor.formatOnPaste": true, //Formata o código colado automaticamente
+  //"files.autoSave": "afterDelay" /*Auto salvamento com delay*/,
+
+  //Explorer
+  "explorer.compactFolders": false, // Define se o explorador irá exibir as subpastas ou apenas a visão resumida da pasta mãe.
+
+  // workbench
+  "workbench.iconTheme": "material-icon-theme", // Temas dos icones
+  "workbench.colorTheme": "Default Dark Modern", // tema
+
+  // prettier (É responsavel por formatar os espaçamentos de cada tag)
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.enable": true,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.semi": false,
+  
+  "liveServer.settings.port": 5501
+}
