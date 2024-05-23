@@ -5,7 +5,17 @@
   "projects": {
     "app-primeira-aula": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "standalone": false
+        },
+        "@schematics/angular:directive": {
+          "standalone": false
+        },
+        "@schematics/angular:pipe": {
+          "standalone": false
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -98,6 +108,6 @@
     }
   },
   "cli": {
-    "analytics": "6377d26f-2518-44c6-9302-a782d1fd43ec"
+    "analytics": "9625567e-f21f-4fa1-abcf-71b036071b06"
   }
 }
