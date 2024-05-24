@@ -1,3 +1,4 @@
+import { ComponentModule } from './components/components.modules';
 import { NgModule } from '@angular/core';
 import {
   BrowserModule,
@@ -9,8 +10,8 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header-components';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, ComponentModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
