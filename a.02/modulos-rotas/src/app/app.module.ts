@@ -9,10 +9,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header-components';
 
+//Ng é como se fosse um objeto passando parêmetros e caracteristicas como declarations, imports, proividers, bootstraps.
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, ComponentModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
+// exporta a classe para ser usada.
 export class AppModule {}
