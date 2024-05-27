@@ -8,11 +8,12 @@ import {
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header-components';
+import { FormsModule } from '@angular/forms';
 
 //Ng é como se fosse um objeto passando parêmetros e caracteristicas como declarations, imports, proividers, bootstraps.
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, ComponentModule],
+  imports: [BrowserModule, AppRoutingModule, ComponentModule, FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })

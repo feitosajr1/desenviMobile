@@ -2,3 +2,23 @@
 <h2>Abaixo o primeiro componente</h2>
 <app-header></app-header>
 <router-outlet></router-outlet>
+
+<!--Transmição de informação-->
+<ul>
+  <!--A descrição vem do correspondente TypeScript "app.compont.ts"-->
+  <li>Item 1 {{ descricao1 }}</li>
+  <li>Item 1</li>
+</ul>
+
+<!--Podemos ter uma entrada de informação para a descrição-->
+<label for="">Digite a descrição</label>
+<br />
+<input [value]="descricao1" />
+<br />
+<!--
+  A principio, digitar a descrição não vai funcionar ou mudar a descrição por que ele é apenas oneway e não twoway databiese
+  para ele ser um twoway, temos que tirar o value e declarar o ngModel no lugar, ele dar um erro no inicio por que ele precisar ter a propriedade importada no "app.module" import:FormsModule
+-->
+<label for="">Digite a descrição</label>
+<br />
+<input [(ngModel)]="descricao1" />
