@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 //descrevo o que é o componente
 @Component({

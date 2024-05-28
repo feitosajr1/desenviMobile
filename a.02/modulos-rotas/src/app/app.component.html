@@ -22,3 +22,38 @@
 <label for="">Digite a descrição</label>
 <br />
 <input [(ngModel)]="descricao1" />
+
+<!-- Video 4
+  *ngIf
+  Permite apresentar condicionalment um templete.
+  A expressão deve gerar um boolean
+  Deve conter o *
+
+  *ngFor
+  Faz umm loop em uma array e apresenta o html para cada item
+  Angular também se encarrega de fazer sincronização com o model
+  Útil para listas, tabelas e qualquer outra informação em grupos.
+  Syntax:
+  <ul*ngFor="let item of items">
+    <li>{{item.name}}
+  </ul>
+-->
+
+<!--
+  Criando uma condicional (*ngIf="clientPremium"), se ele for um cliente premium, vai aparecer uma informação.
+  Temos que colocar o bolean que está recebendo em app.component usando clientPremium = true or false
+-->
+<div *ngIf="clientPremium; else naopremium">
+  <p>Você é um cliente premium, tem acesso a inforaçãos diferenciadas</p>
+</div>
+<ng-template #naopremium>
+  <p>Não é um cliente premium</p>
+</ng-template>
+
+<!--
+  Criando uma condicional (*ngFor=""), se ele for um cliente premium, vai aparecer uma informação.
+  Temos que colocar o bolean que está recebendo em app.component usando
+-->
+<ul *bgFor="let valor of valores">
+  <li>{{ valor.id }} - {{ valor.nome }} - {{ valor.descricao }}</li>
+</ul>
