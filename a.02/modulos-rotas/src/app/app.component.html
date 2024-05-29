@@ -22,6 +22,15 @@
 <label for="">Digite a descrição</label>
 <br />
 <input [(ngModel)]="descricao1" />
+<br /><br /><br />
+<label for="">Nome</label>
+<input [(ngModel)]="valor.nome" />
+<br />
+<label for="">Descrição</label>
+<input [(ngModel)]="valor.descricao" />
+<br />
+<label for="">id</label>
+<input [(ngModel)]="valor.id" />
 
 <!-- Video 4
   *ngIf
@@ -54,6 +63,6 @@
   Criando uma condicional (*ngFor=""), se ele for um cliente premium, vai aparecer uma informação.
   Temos que colocar o bolean que está recebendo em app.component usando
 -->
-<ul *bgFor="let valor of valores">
+<ul *ngFor="let valor of valores">
   <li>{{ valor.id }} - {{ valor.nome }} - {{ valor.descricao }}</li>
 </ul>

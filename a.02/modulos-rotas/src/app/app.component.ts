@@ -8,7 +8,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app-primeira-aula';
   descricao1 = 'Descrição item 2';
-  clientPremium = true;
+  clientPremium = false;
+
+  valor: {
+    descricao: string;
+    nome: string;
+    id: number;
+  } = {
+    descricao: 'teste',
+    nome: 'nome',
+    id: 1,
+  };
 
   valores = [
     {
@@ -16,5 +26,6 @@ export class AppComponent {
       nome: 'nome',
       id: 1,
     },
+    { descricao: 'teste 2', nome: 'nome 2', id: 2 },
   ];
 }
