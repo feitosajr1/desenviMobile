@@ -10,6 +10,8 @@ export class AppComponent {
   descricao1 = 'Descrição item 2';
   clientPremium = false;
 
+  nome = '';
+
   valor: {
     descricao: string;
     nome: string;
@@ -20,6 +22,15 @@ export class AppComponent {
     id: 1,
   };
 
+  valores1 = [
+    {
+      descricao1: 'teste',
+      nome1: 'nome',
+      id1: 1,
+    },
+    { descricao1: 'teste 2', nome1: 'nome 2', id1: 2 },
+  ];
+
   valores = [
     {
       descricao: 'teste',
@@ -28,4 +39,8 @@ export class AppComponent {
     },
     { descricao: 'teste 2', nome: 'nome 2', id: 2 },
   ];
+
+  adicionar() {
+    this.valores.push({ descricao: 'adicionado', nome: this.nome, id: 3 });
+  }
 }

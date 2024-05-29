@@ -63,6 +63,23 @@
   Criando uma condicional (*ngFor=""), se ele for um cliente premium, vai aparecer uma informação.
   Temos que colocar o bolean que está recebendo em app.component usando
 -->
+<ul *ngFor="let valor of valores1">
+  <li>{{ valor.id1 }} - {{ valor.nome1 }} - {{ valor.descricao1 }}</li>
+</ul>
+<br /><br />
+
+<!-- Video 5
+  O angular permite escutar e reagir a qualquer evento de um eleento html da página, click, ketopreaa, mouseenter, mouseleave.
+  Também permite escutar eventos customizados de outros componentes.
+  Criar ua lista com *ngfor, adicinar os os itens com um click, a lista atualiza automaticamente, remover itens da lista
+  marcar itens completados
+-->
+
 <ul *ngFor="let valor of valores">
   <li>{{ valor.id }} - {{ valor.nome }} - {{ valor.descricao }}</li>
 </ul>
+<label for="">Digite um nome</label>
+<input [(ngModel)]="nome">
+<!--Capturar um evento com o botão-->
+<button (click)="adicionar()">Adicionar item</button>
+<!--Dá um alerta por essa função não existe, precisa adicionar no componente TypeScript "componet.ts"-->
