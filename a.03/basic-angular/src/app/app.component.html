@@ -1,0 +1,85 @@
+<h1>Primeira página criada usando modulos</h1>
+<h2>Abaixo o primeiro componente</h2>
+<app-header></app-header>
+<router-outlet></router-outlet>
+
+<!--Transmição de informação-->
+<ul>
+  <!--A descrição vem do correspondente TypeScript "app.compont.ts"-->
+  <li>Item 1 {{ descricao1 }}</li>
+  <li>Item 1</li>
+</ul>
+
+<!--Podemos ter uma entrada de informação para a descrição-->
+<label for="">Digite a descrição</label>
+<br />
+<input [value]="descricao1" />
+<br />
+<!--
+  A principio, digitar a descrição não vai funcionar ou mudar a descrição por que ele é apenas oneway e não twoway databiese
+  para ele ser um twoway, temos que tirar o value e declarar o ngModel no lugar, ele dar um erro no inicio por que ele precisar ter a propriedade importada no "app.module" import:FormsModule
+-->
+<label for="">Digite a descrição</label>
+<br />
+<input [(ngModel)]="descricao1" />
+<br /><br /><br />
+<label for="">Nome</label>
+<input [(ngModel)]="valor.nome" />
+<br />
+<label for="">Descrição</label>
+<input [(ngModel)]="valor.descricao" />
+<br />
+<label for="">id</label>
+<input [(ngModel)]="valor.id" />
+
+<!-- Video 4
+  *ngIf
+  Permite apresentar condicionalment um templete.
+  A expressão deve gerar um boolean
+  Deve conter o *
+
+  *ngFor
+  Faz umm loop em uma array e apresenta o html para cada item
+  Angular também se encarrega de fazer sincronização com o model
+  Útil para listas, tabelas e qualquer outra informação em grupos.
+  Syntax:
+  <ul*ngFor="let item of items">
+    <li>{{item.name}}
+  </ul>
+-->
+
+<!--
+  Criando uma condicional (*ngIf="clientPremium"), se ele for um cliente premium, vai aparecer uma informação.
+  Temos que colocar o bolean que está recebendo em app.component usando clientPremium = true or false
+-->
+<div *ngIf="clientPremium; else naopremium">
+  <p>Você é um cliente premium, tem acesso a inforaçãos diferenciadas</p>
+</div>
+<ng-template #naopremium>
+  <p>Não é um cliente premium</p>
+</ng-template>
+
+<!--
+  Criando uma condicional (*ngFor=""), se ele for um cliente premium, vai aparecer uma informação.
+  Temos que colocar o bolean que está recebendo em app.component usando
+-->
+<ul *ngFor="let valor of valores1">
+  <li>{{ valor.id1 }} - {{ valor.nome1 }} - {{ valor.descricao1 }}</li>
+</ul>
+<br /><br />
+
+<!-- Video 5
+  O angular permite escutar e reagir a qualquer evento de um eleento html da página, click, ketopreaa, mouseenter, mouseleave.
+  Também permite escutar eventos customizados de outros componentes.
+  Criar ua lista com *ngfor, adicinar os os itens com um click, a lista atualiza automaticamente, remover itens da lista
+  marcar itens completados
+-->
+
+<ul *ngFor="let valor of valores">
+  <li>{{ valor.id }} - {{ valor.nome }} - {{ valor.descricao }}</li>
+</ul>
+<label for="">Digite um nome</label>
+<input [(ngModel)]="nome">
+<!--Capturar um evento com o botão-->
+<button (click)="adicionar()">Adicionar item</button>
+<!--Dá um alerta por essa função não existe, precisa adicionar no componente TypeScript "componet.ts"-->

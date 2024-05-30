@@ -1,0 +1,12 @@
+<h2>Header components</h2>
+<!--
+  Crio um link para levar até o outro módulo, esse link vai chamar através de uma rota o mudulo que criamos.
+-->
+<a [routerLink]="['./client']"
+  >Esse link leva para o próximo modulo através de uma rota</a
+>
+
+<!--
+  Caso esse templete "header.component" (como o módulo inteiro)  tenha sido criado manualmente, é possível que as rotas não estejam importadas no arquivo TypeScript, temos que importar as rotas no módulo para que elas funcionem.
+  -> Continua em components.modules.ts
+-->
