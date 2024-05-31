@@ -17,11 +17,11 @@
   "workbench.colorTheme": "Default Dark Modern", // tema
 
   // prettier (É responsavel por formatar os espaçamentos de cada tag)
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "prettier.enable": true,
-  "prettier.singleQuote": false,
-  "prettier.tabWidth": 2,
-  "prettier.semi": false,
-  
+  // "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "prettier.enable": true,
+  // "prettier.singleQuote": false,
+  // "prettier.tabWidth": 2,
+  // "prettier.semi": false,
+
   "liveServer.settings.port": 5501
 }
