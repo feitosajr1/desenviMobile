@@ -79,7 +79,14 @@
   <li>{{ valor.id }} - {{ valor.nome }} - {{ valor.descricao }}</li>
 </ul>
 <label for="">Digite um nome</label>
-<input [(ngModel)]="nome">
+<input [(ngModel)]="nome" />
 <!--Capturar um evento com o botão-->
 <button (click)="adicionar()">Adicionar item</button>
 <!--Dá um alerta por essa função não existe, precisa adicionar no componente TypeScript "componet.ts"-->
+<br /><br />
+
+<!--Aula 3 Conceitos básicos do Angular -->
+<!--Video 1 Binding de propriedades-->
+
+<app-binding></app-binding>
+<!--A classe app-binding está sendo estanciada em binding-page.component.ts como seu template e propriedades-->
